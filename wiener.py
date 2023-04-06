@@ -6,12 +6,13 @@ import torch.nn.functional as F
 
 
 class Wiener_3D(nn.Module):
-    def __init__(self, weight_fft=0.3, weight_interp=0.3, default_size=32):
+    def __init__(self, weight_fft=0.3, weight_interp=0.3, default_size=32,overlap=4):
         super(Wiener_3D, self).__init__()
         self.relu = nn.ReLU()
         self.weight_fft = weight_fft
         self.weight_interp = weight_interp
         self.default_size = default_size
+        self.overlap = overlap
 
 
     def forward(self, I, noise_std):
@@ -23,7 +24,7 @@ class Wiener_3D(nn.Module):
 
         bx = block_size
         hbx = bx / 2
-        overlap = 4
+        overlap = self.overlap
         # CALCULATE THE COSINE WINDOW
         win1x = torch.exp(-(torch.arange(-hbx + 0.5, hbx - 0.5 + 1)) ** 2 / (self.weight_fft * hbx * hbx)).cuda() # 0.3 default
         win1x = win1x.unsqueeze(0).repeat(block_size, 1)

@@ -10,7 +10,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else 'cpu')
 
 
 if __name__ == '__main__':
-    test_dataset = load_noise_imgs('/home/bledc/dataset/wiener_demo_gaussian_imgs', 100, patch_size=800)
+    dataset_path = "/home/user/placeholder"
+    test_dataset = load_noise_imgs(dataset_path, 100)
 
     test_loader = torch.utils.data.DataLoader(
         test_dataset, batch_size=1,
@@ -19,11 +20,14 @@ if __name__ == '__main__':
 
     print(device)
 
-    wiener_denoiser = nn.DataParallel(Wiener_3D(0.3, 0.6, 32)).cuda()
+    std = 50
+    win_size=32
+    overlap=4
+    wiener_denoiser = nn.DataParallel(Wiener_3D(0.3, 0.6, win_size, overlap)).cuda()
     for i, noise_img in enumerate(test_loader):
         noise_img = noise_img.cuda()
 
-        std = 50
+        
         k = 7.8 
 
         std_curr = torch.full((noise_img.size(0), noise_img.size(1), noise_img.size(2), noise_img.size(3)), std / 255)

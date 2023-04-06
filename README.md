@@ -4,7 +4,7 @@ Pytorch implementation of the Wiener image denoising filter. Allow models to be 
 Uses 3D FFT, custom Gaussian windowing,  tunable overlapping block density. 
 
 ## Usage
-Replace `dataset_path` with location of noisy images directories. As dataloader is designed for multiple image folders, your directory should follow the structure below: 
+In `test_denoiser.py` replace `dataset_path` with location of noisy images directories. As dataloader is designed for multiple image folders, your directory should follow the structure below: 
 ```
 Base
 │

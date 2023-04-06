@@ -26,3 +26,24 @@ Base
 `overlap` specifies the number of overlapping windows in a given block. In other words, selects the sliding window stride. E.g. `win_size = 32` and `overlap = 4`  creates a stride of 8 pixels for the windows.
 
 Denoised images saved to current directory.
+
+## Denoised Gaussian Noise Images, STD=50 
+noisy
+
+![
+](images/13_noisy.png)
+
+![
+](images/13_denoise.png)
+
+![
+](images/5_noisy.png)
+
+![
+](images/5_denoise.png)
+
+![
+](images/34_noisy.png)
+
+![
+](images/34_denoise.png)

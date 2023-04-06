@@ -28,8 +28,6 @@ Base
 Denoised images saved to current directory.
 
 ## Denoised Gaussian Noise Images, STD=50 
-noisy
-
 ![
 ](images/13_noisy.png)
 

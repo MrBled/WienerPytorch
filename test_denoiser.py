@@ -29,7 +29,6 @@ if __name__ == '__main__':
 
         
         k = 7.8 
-
         std_curr = torch.full((noise_img.size(0), noise_img.size(1), noise_img.size(2), noise_img.size(3)), std / 255)
         
         wiener_filtered = wiener_denoiser(noise_img, std_curr * k)

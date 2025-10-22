@@ -27,6 +27,21 @@ Base
 
 Denoised images saved to current directory.
 
+## Citation
+
+If you use this repository in your research or software, **please cite it** and acknowledge the author.
+
+**Software**
+
+> Bled, Clément. *WienerPytorch: PyTorch Wiener Denoising Filter*. GitHub. https://github.com/MrBled/WienerPytorch
+
+You can also use the BibTeX from the **Cite this repository** panel on the right (powered by `CITATION.cff`).
+
+**Related paper**
+
+> Clément Bled and François Pitié. “Pushing the Limits of the Wiener Filter in Image Denoising.” *2023 IEEE International Conference on Image Processing (ICIP)*, 2023. https://doi.org/10.1109/ICIP49359.2023.10222826
+
+
 ## Denoised Gaussian Noise Images, STD=50 
 ![
 ](images/13_noisy.png)

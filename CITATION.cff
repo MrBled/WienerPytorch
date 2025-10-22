@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it."
+title: "WienerPytorch: PyTorch Wiener Denoising Filter"
+type: software
+authors:
+  - family-names: "Bled"
+    given-names: "Clément"
+    affiliation: "Sigmedia Research, Trinity College Dublin"
+    orcid: "https://orcid.org/0000-0001-5395-5773"
+repository-code: "https://github.com/MrBled/WienerPytorch"
+abstract: "PyTorch implementation of the Wiener image denoising filter with 3D FFT, Gaussian windowing, and tunable overlapping block density."
+keywords:
+  - "Wiener filter"
+  - "image denoising"
+  - "PyTorch"
+  - "FFT"
+license: "MIT"
+# Add this when you tag a release, e.g., v0.1.0
+# version: "0.1.0"
+date-released: 2025-10-22
+
+preferred-citation:
+  type: software
+  title: "WienerPytorch: PyTorch Wiener Denoising Filter"
+  authors:
+    - family-names: "Bled"
+      given-names: "Clément"
+      affiliation: "Sigmedia Research, Trinity College Dublin"
+      orcid: "https://orcid.org/0000-0001-5395-5773"
+  repository-code: "https://github.com/MrBled/WienerPytorch"
+  notes: "Please acknowledge the author when using this software."
+
+references:
+  - type: conference-paper
+    title: "Pushing the Limits of the Wiener Filter in Image Denoising"
+    authors:
+      - family-names: "Bled"
+        given-names: "Clément"
+      - family-names: "Pitié"
+        given-names: "François"
+    year: 2023
+    conference:
+      name: "2023 IEEE International Conference on Image Processing (ICIP)"
+    doi: "10.1109/ICIP49359.2023.10222826"
